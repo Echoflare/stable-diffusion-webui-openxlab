@@ -118,6 +118,17 @@ def run_webui():
     model_download(hypernetwork_models, 'models/hypernetworks')
     model_download(embedding_models, 'embeddings')
     model_download(esrgan_models, 'models/ESRGAN')
+    
+    os.chdir(f"{install_path}/{rename_repo}")
+    package_envs = [
+    {"env": "STABLE_DIFFUSION_REPO", "url": os.environ.get('STABLE_DIFFUSION_REPO', "https://gitcode.net/overbill1683/stablediffusion")},
+    {"env": "STABLE_DIFFUSION_XL_REPO", "url": os.environ.get('STABLE_DIFFUSION_XL_REPO', "https://gitcode.net/overbill1683/generative-models")},
+    {"env": "K_DIFFUSION_REPO", "url": os.environ.get('K_DIFFUSION_REPO', "https://gitcode.net/overbill1683/k-diffusion")},
+    {"env": "CODEFORMER_REPO", "url": os.environ.get('CODEFORMER_REPO', "https://gitcode.net/overbill1683/CodeFormer")},
+    {"env": "BLIP_REPO", "url": os.environ.get('BLIP_REPO', "https://gitcode.net/overbill1683/BLIP")},
+]
+    for i in package_envs:
+        os.environ[i["env"]] = i["url"]
 
     os.chdir(f"{install_path}/{rename_repo}")
     os.system(f"python launch.py {' '.join(webui_args)} --port {webui_port}")
