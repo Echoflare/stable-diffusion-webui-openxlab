@@ -126,8 +126,8 @@ def run_webui():
     {"env": "K_DIFFUSION_REPO", "url": os.environ.get('K_DIFFUSION_REPO', "https://gitcode.net/overbill1683/k-diffusion")},
     {"env": "CODEFORMER_REPO", "url": os.environ.get('CODEFORMER_REPO', "https://gitcode.net/overbill1683/CodeFormer")},
     {"env": "BLIP_REPO", "url": os.environ.get('BLIP_REPO', "https://gitcode.net/overbill1683/BLIP")},
+    ]
     os.environ["PIP_INDEX_URL"] = "https://mirrors.aliyun.com/pypi/simple/"
-]
     for i in package_envs:
         os.environ[i["env"]] = i["url"]
 
