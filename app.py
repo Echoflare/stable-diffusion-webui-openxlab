@@ -22,7 +22,7 @@ webui_args = [
 '--ui-settings-file /home/xlab-app-center/config.json',
 '--ui-config-file /home/xlab-app-center/ui-config.json',
 '--api-auth=Echoflare:Ag34d9ht',
-'--freeze-settings',
+# '--freeze-settings',
 ]
 
 extensions = [
