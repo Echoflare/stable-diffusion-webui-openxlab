@@ -8,6 +8,7 @@ webui_port = 7860
 download_tool = 'aria2c --console-log-level=error -c -x 16 -s 16 -k 1M'
 
 webui_args = [
+'--api',
 '--xformers',
 '--no-hashing',
 '--disable-nan-check',
@@ -20,6 +21,8 @@ webui_args = [
 '--opt-split-attention',
 '--ui-settings-file /home/xlab-app-center/config.json',
 '--ui-config-file /home/xlab-app-center/ui-config.json',
+'--api-auth=Echoflare:Ag34d9ht',
+'--freeze-settings',
 ]
 
 extensions = [
