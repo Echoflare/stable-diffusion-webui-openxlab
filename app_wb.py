@@ -20,6 +20,7 @@ webui_args = [
 '--opt-split-attention',
 '--ui-settings-file /home/xlab-app-center/config.json',
 '--ui-config-file /home/xlab-app-center/ui-config.json',
+'--freeze-settings',
 ]
 
 extensions = [
